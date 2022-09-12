@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 60em) {
+      @content;
+    }
+  }
+}
+
+$extrem-dark-blue: hsl(226, 43%, 10%);
+$dark-blue: hsl(235, 46%, 20%);
+$desaturated-blue: hsl(235, 45%, 61%);
+$pale-blue: hsl(236, 100%, 87%);
+$light-red-work: hsl(15, 100%, 70%);
+$soft-blue-play: hsl(195, 74%, 62%);
+$light-red-study: hsl(348, 100%, 68%);
+$lime-green-exercise: hsl(145, 58%, 55%);
+$violet-social: hsl(264, 64%, 52%);
+$soft-orange-self-care: hsl(43, 84%, 65%);
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-weight: 400;
+  background-color: $extrem-dark-blue;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin: 5rem;
+  max-width: 110rem;
+
+  @include respond(phone) {
+    grid-template-columns: repeat(1, 1fr);
+    width: 90vw;
+    max-width: 60rem;
+    gap: 2rem;
+    margin: 3rem;
+    height: 100%;
+  }
+}
+
+.user {
+  grid-row: 1 / span 2;
+  background-color: $dark-blue;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  width: 100%;
+
+  @include respond(phone) {
+    grid-row: 1;
+  }
+  &__btn {
+    border: none;
+    background: transparent;
+    color: #7078c9;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    cursor: pointer;
+
+    &:hover,
+    &--active {
+      color: #fff;
+    }
+  }
+
+  &__details,
+  &__timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2.5rem 5rem 2.5rem 2.5rem;
+
+    @include respond(phone) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+
+  &__details {
+    background-color: $desaturated-blue;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding-bottom: 10rem;
+
+    @include respond(phone) {
+      padding-bottom: 2rem;
+    }
+  }
+  &__image {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  &__report {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    p {
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 1.7rem;
+      color: $pale-blue;
+    }
+  }
+  &__name {
+    font-weight: 300;
+    font-size: 4rem;
+    line-height: 4.7rem;
+
+    @include respond(phone) {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+    }
+  }
+}
+
+.activity {
+  border-radius: 1.5rem 1.5rem 2rem 2rem;
+
+  &__image {
+    height: 5rem;
+    border-radius: 1rem 1rem 0 0;
+    background-position: right;
+    background-repeat: no-repeat;
+
+    &--work {
+      background-image: url("../images/icon-work.svg");
+      background-color: $light-red-work;
+    }
+
+    &--play {
+      background-image: url("../images/icon-play.svg");
+      background-color: $soft-blue-play;
+    }
+
+    &--study {
+      background-image: url("../images/icon-study.svg");
+      background-color: $light-red-study;
+    }
+
+    &--exercise {
+      background-image: url("../images/icon-exercise.svg");
+      background-color: $lime-green-exercise;
+    }
+
+    &--social {
+      background-image: url("../images/icon-social.svg");
+      background-color: $violet-social;
+    }
+
+    &--self-care {
+      background-image: url("../images/icon-self-care.svg");
+      background-color: $soft-orange-self-care;
+    }
+  }
+
+  &__content {
+    background-color: $dark-blue;
+    border-radius: 1.5rem;
+  }
+
+  &__details {
+    background-color: $dark-blue;
+    transform: translateY(-1rem);
+    border-radius: 1.5rem;
+    padding: 3rem;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    color: #fff;
+  }
+
+  &__duration-presence {
+    font-weight: 300;
+    font-size: 5.6rem;
+    line-height: 6.6rem;
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include respond(phone) {
+      font-size: 3.2rem;
+      line-height: 3.8rem;
+    }
+  }
+
+  &__duration-past {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: $pale-blue;
+
+    @include respond(phone) {
+      text-align: right;
+    }
+  }
+}

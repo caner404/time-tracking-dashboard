@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script type="module" defer src="js/script.js"></script>
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="user">
+        <div class="user__details">
+          <img
+            src="images/image-jeremy.png"
+            alt="User image"
+            class="user__image"
+          />
+          <div class="user__report">
+            <p>Report for</p>
+            <h2 class="user__name">Jeremy Robson</h2>
+          </div>
+        </div>
+        <div class="user__timeline">
+          <button class="user__btn user__timeline--daily">Daily</button>
+          <button class="user__btn user__timeline--weekly">Weekly</button>
+          <button class="user__btn user__timeline--monthly">Monthly</button>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="activity__image activity__image--work"></div>
+        <div class="activity__content">
+          <div class="activity__details">
+            <div class="activity__header">
+              <p class="activity__name">Work</p>
+              <img src="images/icon-ellipsis.svg" alt="three dots" />
+            </div>
+            <div class="activity__duration">
+              <p class="activity__duration-presence">32hrs</p>
+              <p class="activity__duration-past">Last Week - 36hours</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="activity__image activity__image--play"></div>
+        <div class="activity__content">
+          <div class="activity__details">
+            <div class="activity__header">
+              <p class="activity__name">Play</p>
+              <img src="images/icon-ellipsis.svg" alt="three dots" />
+            </div>
+            <div class="activity__duration">
+              <p class="activity__duration-presence">10hrs</p>
+              <p class="activity__duration-past">Last Week - 8hours</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="activity__image activity__image--study"></div>
+        <div class="activity__content">
+          <div class="activity__details">
+            <div class="activity__header">
+              <p class="activity__name">Study</p>
+              <img src="images/icon-ellipsis.svg" alt="three dots" />
+            </div>
+            <div class="activity__duration">
+              <p class="activity__duration-presence">4hrs</p>
+              <p class="activity__duration-past">Last Week - 7hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="activity__image activity__image--exercise"></div>
+        <div class="activity__content">
+          <div class="activity__details">
+            <div class="activity__header">
+              <p class="activity__name">Exercise</p>
+              <img src="images/icon-ellipsis.svg" alt="three dots" />
+            </div>
+            <div class="activity__duration">
+              <p class="activity__duration-presence">4hrs</p>
+              <p class="activity__duration-past">Last Week - 5hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="activity__image activity__image--social"></div>
+        <div class="activity__content">
+          <div class="activity__details">
+            <div class="activity__header">
+              <p class="activity__name">Social</p>
+              <img src="images/icon-ellipsis.svg" alt="three dots" />
+            </div>
+            <div class="activity__duration">
+              <p class="activity__duration-presence">5hrs</p>
+              <p class="activity__duration-past">Last Week - 10hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="activity__image activity__image--self-care"></div>
+        <div class="activity__content">
+          <div class="activity__details">
+            <div class="activity__header">
+              <p class="activity__name">Self Care</p>
+              <img src="images/icon-ellipsis.svg" alt="three dots" />
+            </div>
+            <div class="activity__duration">
+              <p class="activity__duration-presence">2hrs</p>
+              <p class="activity__duration-past">Last Week - 2hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

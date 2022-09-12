@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-weight: 400;
+  background-color: hsl(226deg, 43%, 10%);
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin: 5rem;
+  max-width: 110rem;
+}
+@media only screen and (max-width: 60em) {
+  .dashboard {
+    grid-template-columns: repeat(1, 1fr);
+    width: 90vw;
+    max-width: 60rem;
+    gap: 2rem;
+    margin: 3rem;
+    height: 100%;
+  }
+}
+
+.user {
+  grid-row: 1/span 2;
+  background-color: hsl(235deg, 46%, 20%);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  width: 100%;
+}
+@media only screen and (max-width: 60em) {
+  .user {
+    grid-row: 1;
+  }
+}
+.user__btn {
+  border: none;
+  background: transparent;
+  color: #7078c9;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  cursor: pointer;
+}
+.user__btn:hover, .user__btn--active {
+  color: #fff;
+}
+.user__details, .user__timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2.5rem 5rem 2.5rem 2.5rem;
+}
+@media only screen and (max-width: 60em) {
+  .user__details, .user__timeline {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+.user__details {
+  background-color: hsl(235deg, 45%, 61%);
+  border-radius: 1rem;
+  overflow: hidden;
+  padding-bottom: 10rem;
+}
+@media only screen and (max-width: 60em) {
+  .user__details {
+    padding-bottom: 2rem;
+  }
+}
+.user__image {
+  width: 8rem;
+  height: 8rem;
+}
+.user__report {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.user__report p {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+  color: hsl(236deg, 100%, 87%);
+}
+.user__name {
+  font-weight: 300;
+  font-size: 4rem;
+  line-height: 4.7rem;
+}
+@media only screen and (max-width: 60em) {
+  .user__name {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+}
+
+.activity {
+  border-radius: 1.5rem 1.5rem 2rem 2rem;
+}
+.activity__image {
+  height: 5rem;
+  border-radius: 1rem 1rem 0 0;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.activity__image--work {
+  background-image: url("../images/icon-work.svg");
+  background-color: hsl(15deg, 100%, 70%);
+}
+.activity__image--play {
+  background-image: url("../images/icon-play.svg");
+  background-color: hsl(195deg, 74%, 62%);
+}
+.activity__image--study {
+  background-image: url("../images/icon-study.svg");
+  background-color: hsl(348deg, 100%, 68%);
+}
+.activity__image--exercise {
+  background-image: url("../images/icon-exercise.svg");
+  background-color: hsl(145deg, 58%, 55%);
+}
+.activity__image--social {
+  background-image: url("../images/icon-social.svg");
+  background-color: hsl(264deg, 64%, 52%);
+}
+.activity__image--self-care {
+  background-image: url("../images/icon-self-care.svg");
+  background-color: hsl(43deg, 84%, 65%);
+}
+.activity__content {
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 1.5rem;
+}
+.activity__details {
+  background-color: hsl(235deg, 46%, 20%);
+  transform: translateY(-1rem);
+  border-radius: 1.5rem;
+  padding: 3rem;
+}
+.activity__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.activity__name {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  color: #fff;
+}
+.activity__duration-presence {
+  font-weight: 300;
+  font-size: 5.6rem;
+  line-height: 6.6rem;
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media only screen and (max-width: 60em) {
+  .activity__duration-presence {
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+  }
+}
+.activity__duration-past {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  color: hsl(236deg, 100%, 87%);
+}
+@media only screen and (max-width: 60em) {
+  .activity__duration-past {
+    text-align: right;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
